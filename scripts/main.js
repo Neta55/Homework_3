@@ -57,13 +57,13 @@ function main() {
             }
         }
 
-
-
-
-
     }
 
-    main()
+
+
+}
+
+main()
 
 // findFizzBuzzClear(); //?
     // console.log('Find all numbers based on pre-defined parameters') // =meklēšanas (confirm/resume) pogas nosaukums
