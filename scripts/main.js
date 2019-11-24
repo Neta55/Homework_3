@@ -27,7 +27,7 @@ function main() {
     fizzNum.value = 3;
     buzzNum.value = 5;
 
-    // initialNum = 1, lastNum = 100, fizzNum = 3, buzzNum = 5
+
 
     function addElem(parent, obj) {
         const elem = document.createElement(obj.tag)
