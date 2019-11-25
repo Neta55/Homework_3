@@ -2,68 +2,106 @@
 console.log('Running main.js');
 
 function main() {
-    const app = document.querySelector('#app');
+    const header = document.querySelector('#header');
 
-    const myTittle = document.createElement('h1');
+    const myTittle = document.createElement('h1'); // lielais virsraksts fizzbuzz
     myTittle.innerText = 'FIZZ-BUZZ';
     myTittle.classList.add('h1')
-    app.appendChild(myTittle);
+    header.appendChild(myTittle);
 
-    const cont_nav = document.createElement('div');
+
+    const cont_nav = document.getElementById('cont_nav');
     cont_nav.classList.add('cont_nav');
-    app.appendChild(cont_nav);
-
-    const cont_main = document.createElement('div');
+    const cont_main = document.getElementById('cont_main');
     cont_main.classList.add('cont_main');
-    app.appendChild(cont_main);
-
-    let initialNum = document.getElementById('initialNum').value;
-    let lastNum = document.getElementById('lastNum').value;
-    let fizzNum = document.getElementById('fizzNum').value;
-    let buzzNum = document.getElementById('buzzNum').value;
-
-    initialNum.value = 1;
-    lastNum.value = 100;
-    fizzNum.value = 3;
-    buzzNum.value = 5;
 
 
 
-    function addElem(parent, obj) {
-        const elem = document.createElement(obj.tag)
-        obj.id = id;
-        parent.appendChild(elem);
-        // return elem;
-
-        for (initialNum; initialNum <= lastNum; initialNum++) {
-            addElem(cont_main, { id: 'elem' + initialNum, tag='div', innerText=initialNum })
-            cont_main.appendChild(elem)
-
-            if (initialNum % fizzNum === 0 && initialNum % buzzNum === 0) {
-                elem.innerText = "FizzBuzz " + initialNum;
-                elem.classList.add('FizzBuzz');
-            }
-            else if (initialNum % fizzNum === 0) {
-                elem.innerText = "Fizz " + initialNum;
-                elem.classList.add('Fizz');
-            }
-            else if (nitialNum % buzzNum === 0) {
-                elem.innerText = "Buzz " + initialNum;
-                elem.classList.add('Buzz');
-            }
-            else {
-                elem.innerText = initialNum;
-                elem.classList.add('ordinary');
-            }
-        }
-
-    }
+    // const initialNum = document.getElementById('initialNum').value;
+    // const lastNum = document.getElementById('lastNum').value;
+    // const fizzNum = document.getElementById('fizzNum').value;
+    // const buzzNum = document.getElementById('buzzNum').value;
+    // console.log("initialNum-" + initialNum);
+    // console.log("lastNum-" + lastNum);
+    // console.log("fizzNum-" + fizzNum);
+    // console.log("buzzNum-" + buzzNum);
 
 
+    const buttonGo = document.getElementById('buttonGo');
+    buttonGo.addEventListener("click", addManyElements)
+    const buttonRESET = document.getElementById('buttonRESET');
+    buttonRESET.addEventListener("click", clearManyElements)
+    const buttonFizz = document.getElementById('buttonFizz');
+    const buttonBuzz = document.getElementById('buttonBuzz');
+    const buttonFizzBuzz = document.getElementById('buttonFizzBuzz');
 
+
+    addManyElements(cont_main);
 }
 
-main()
+// function addElem(parent, obj) {
+//     const elem = document.createElement(obj.tag);
+//     elem.id = obj.id;
+//     elem.innerText = obj.innerText;
+//     parent.appendChild(elem);
+//     // return elem;
+// }
 
-// findFizzBuzzClear(); //?
-    // console.log('Find all numbers based on pre-defined parameters') // =meklēšanas (confirm/resume) pogas nosaukums
+function clearManyElements() {
+    while (cont_main.firstChild) {
+        cont_main.removeChild(cont_main.firstChild)
+    }
+}
+
+function addManyElements(parent) {
+    clearManyElements();
+    console.log("Iztīrīts");
+    console.log("Atrasti FizzBuzz");
+    const initialNum = document.getElementById('initialNum').value;
+    const lastNum = document.getElementById('lastNum').value;
+    const fizzNum = document.getElementById('fizzNum').value;
+    const buzzNum = document.getElementById('buzzNum').value;
+    console.log("initialNum-" + initialNum);
+    console.log("lastNum-" + lastNum);
+    console.log("fizzNum-" + fizzNum);
+    console.log("buzzNum-" + buzzNum);
+    for (let i = initialNum; i <= lastNum; i++) {
+        const elem = document.createElement('div');
+        elem.id = "elem=" + i;
+
+        cont_main.appendChild(elem);
+
+        if (i % fizzNum === 0 && i % buzzNum === 0) {
+            elem.setAttribute("id", "elem=" + i);
+            elem.setAttribute("class", "FizzBuzz");
+            elem.innerText = "FizzBuzz, " + i;
+
+        }
+        else if (i % fizzNum === 0) {
+            elem.setAttribute("id", "elem=" + i);
+            elem.setAttribute("class", "Fizz");
+            elem.innerText = "Fizz, " + i;
+
+        }
+        else if (i % buzzNum === 0) {
+            elem.setAttribute("id", "elem=" + i);
+            elem.setAttribute("class", "Buzz");
+            elem.innerText = "Buzz, " + i;
+
+        }
+        else {
+            elem.setAttribute("id", "elem=" + i);
+            elem.setAttribute("class", "ordinary");
+            elem.innerText = i;
+
+        }
+    }
+}
+
+
+
+
+
+
+main();
+

@@ -1,7 +1,7 @@
 body {
     font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
     text-align: center;
-    padding: 10px;
+    padding: 20px;
     margin: auto;
     background-image: url("TILE.svg");
     background-size: 7px;
@@ -9,26 +9,86 @@ body {
 h1 {
 color: #9900cc;
 }
+.label {
+
+    font-weight: bold;
+}
+
 #cont_nav {
     width: 100%;
     height: auto;
     display: flex;
-    justify-content: space-evenly;
-    flex-wrap:  wrap;
-    align-items: flex-start;
-    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
     text-align: center;
-    gap: 15px;
+    background-color: white;
+    padding: 10px 0 10px;
+   
 
 }
+
+.inputu-rinda {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: row;
+    padding: 5px 0 5px;
+
+
+}
+
+input {
+font-size: 1.5em;   
+padding: 4px;
+margin: 5px;
+width: 70px;
+font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+}
+
+button {
+    font-size: 1.5em; 
+    width: 200px;
+    border-radius: 5px;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    padding: 4px;
+}
+.buttonGo {
+    background: chartreuse;
+   
+}
+
+.buttonRESET {
+    background: red;
+   
+}
+
+.buttonFizz {
+background: rgb( 255, 51, 255);
+}
+
+.buttonBuzz {
+    background: rgb(176, 147, 245);
+    }
+
+.buttonFizzBuzz {
+    background: #9900cc;
+    color: white;
+    }
 
 #cont_main {
 
     width: 100%;
     height: auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax (150px, 1fr));
-    grid-gap: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
     align-content: center;
     justify-items: center;
 }
@@ -37,12 +97,14 @@ color: #9900cc;
 
     .ordinary {
         display: flex;
-        width: 100%;
+        min-width: 150px;
         min-height: 70px;
         border-radius: 7px;
-        font-size: 1.2em;
-        transition: all 0.5s ease-out;
-        background-color: whitesmoke;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5em;
+        background-color: white;
+        margin: 10px 0 10px;
     }
 
     .ordinary:hover {
@@ -51,42 +113,48 @@ color: #9900cc;
 
     .Fizz {
         display: flex;
-        width: 100%;
+        min-width: 150px;
         min-height: 70px;
         border-radius: 7px;
-        font-size: 1.2em;
-        transition: all 0.5s ease-out;
-        background-color:#ffccff;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5em;
+        background-color:rgb( 255, 51, 255);
+        margin: 10px 0 10px;
     }
 
     .Fizz:hover {
-        box-shadow: rgba(0, 0, 0, 0.7) 2px 5px 10px, inset rgba(255, 51, 255, 1) 20px;
+        box-shadow: rgba(0, 0, 0, 0.7) 2px 5px 10px, inset rgba(0, 0, 0, 0.3) 20px;
     }
 
     .Buzz {
         display: flex;
-        width: 100%;
+        min-width: 150px;
         min-height: 70px;
         border-radius: 7px;
-        font-size: 1.2em;
-        transition: all 0.5s ease-out;
-        background-color: #ffffcc;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5em;
+        background-color: rgb(176, 147, 245);
+        margin: 10px 0 10px;
     }
 
     .Buzz:hover {
-        box-shadow: rgba(0, 0, 0, 0.7) 2px 5px 10px, inset rgba(255, 255, 51, 1) 20px;
+        box-shadow: rgba(0, 0, 0, 0.7) 2px 5px 10px, inset rgba(0, 0, 0, 0.3) 20px;
     }
 
     .FizzBuzz {
         display: flex;
-        width: 100%;
+        min-width: 150px;
         min-height: 70px;
         border-radius: 7px;
-        font-size: 1.2em;
-        transition: all 0.5s ease-out;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5em;
         background-color: #9900cc;
         color: whitesmoke;
+        margin: 10px 0 10px;
     }
     .FizzBuzz:hover {
-        box-shadow: rgba(0, 0, 0, 0.7) 2px 5px 10px, inset rgba(102, 0, 102, 1) 20px;
+        box-shadow: rgba(0, 0, 0, 0.7) 2px 5px 10px, inset rgba(0, 0, 0, 0.3) 20px;
     }
