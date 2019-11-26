@@ -57,10 +57,10 @@ function addManyElements(parent) {
     clearManyElements();
     console.log("Iztīrīts");
     console.log("Atrasti FizzBuzz");
-    const initialNum = document.getElementById('initialNum').value;
-    const lastNum = document.getElementById('lastNum').value;
-    const fizzNum = document.getElementById('fizzNum').value;
-    const buzzNum = document.getElementById('buzzNum').value;
+    const initialNum = parseInt(document.getElementById('initialNum').value);
+    const lastNum = parseInt(document.getElementById('lastNum').value);
+    const fizzNum = parseInt(document.getElementById('fizzNum').value);
+    const buzzNum = parseInt(document.getElementById('buzzNum').value);
     console.log("initialNum-" + initialNum);
     console.log("lastNum-" + lastNum);
     console.log("fizzNum-" + fizzNum);
