@@ -17,17 +17,8 @@ function main() {
 
 
 
-    // const initialNum = document.getElementById('initialNum').value;
-    // const lastNum = document.getElementById('lastNum').value;
-    // const fizzNum = document.getElementById('fizzNum').value;
-    // const buzzNum = document.getElementById('buzzNum').value;
-    // console.log("initialNum-" + initialNum);
-    // console.log("lastNum-" + lastNum);
-    // console.log("fizzNum-" + fizzNum);
-    // console.log("buzzNum-" + buzzNum);
 
-
-    const buttonGo = document.getElementById('buttonGo');
+    const buttonGo = document.getElementById('buttonGo'); // izsauktas visas pogas un tām piešķirta funkcija
     buttonGo.addEventListener("click", addManyElements);
     const buttonCLEAR = document.getElementById('buttonCLEAR');
     buttonCLEAR.addEventListener("click", clearManyElements);
@@ -41,7 +32,7 @@ function main() {
     buttonFizzBuzz.addEventListener("click", findOnlyFizzBuzz);
 
 
-    addManyElements(cont_main);
+    addManyElements(cont_main); //lai palaižot parādītu defaultās vērtības
 }
 
 
