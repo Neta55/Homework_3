@@ -28,24 +28,30 @@ function main() {
 
 
     const buttonGo = document.getElementById('buttonGo');
-    buttonGo.addEventListener("click", addManyElements)
+    buttonGo.addEventListener("click", addManyElements);
+    const buttonCLEAR = document.getElementById('buttonCLEAR');
+    buttonCLEAR.addEventListener("click", clearManyElements);
     const buttonRESET = document.getElementById('buttonRESET');
-    buttonRESET.addEventListener("click", clearManyElements)
+    buttonRESET.addEventListener("click", reset);
     const buttonFizz = document.getElementById('buttonFizz');
+    buttonFizz.addEventListener("click", findOnlyFizz);
     const buttonBuzz = document.getElementById('buttonBuzz');
+    buttonBuzz.addEventListener("click", findOnlyBuzz);
     const buttonFizzBuzz = document.getElementById('buttonFizzBuzz');
+    buttonFizzBuzz.addEventListener("click", findOnlyFizzBuzz);
 
 
     addManyElements(cont_main);
 }
 
-// function addElem(parent, obj) {
-//     const elem = document.createElement(obj.tag);
-//     elem.id = obj.id;
-//     elem.innerText = obj.innerText;
-//     parent.appendChild(elem);
-//     // return elem;
-// }
+
+function reset() {
+    initialNum.value = 1;
+    lastNum.value = 100;
+    fizzNum.value = 3;
+    buzzNum.value = 5;
+}
+
 
 function clearManyElements() {
     while (cont_main.firstChild) {
@@ -57,10 +63,10 @@ function addManyElements(parent) {
     clearManyElements();
     console.log("Iztīrīts");
     console.log("Atrasti FizzBuzz");
-    const initialNum = parseInt(document.getElementById('initialNum').value);
-    const lastNum = parseInt(document.getElementById('lastNum').value);
-    const fizzNum = parseInt(document.getElementById('fizzNum').value);
-    const buzzNum = parseInt(document.getElementById('buzzNum').value);
+    var initialNum = parseInt(document.getElementById('initialNum').value);
+    var lastNum = parseInt(document.getElementById('lastNum').value);
+    var fizzNum = parseInt(document.getElementById('fizzNum').value);
+    var buzzNum = parseInt(document.getElementById('buzzNum').value);
     console.log("initialNum-" + initialNum);
     console.log("lastNum-" + lastNum);
     console.log("fizzNum-" + fizzNum);
@@ -99,8 +105,40 @@ function addManyElements(parent) {
 }
 
 
+function findOnlyFizzBuzz() {
+    clearManyElements();
+    addManyElements();
+    let ordinaryClass = cont_main.getElementsByClassName("ordinary");
+    while (ordinaryClass[0]) { ordinaryClass[0].parentNode.removeChild(ordinaryClass[0]) };
+    let fizzClass = cont_main.getElementsByClassName("Fizz");
+    while (fizzClass[0]) { fizzClass[0].parentNode.removeChild(fizzClass[0]) };
+    let buzzClass = cont_main.getElementsByClassName("Buzz");
+    while (buzzClass[0]) { buzzClass[0].parentNode.removeChild(buzzClass[0]) };
 
+}
 
+function findOnlyFizz() {
+    clearManyElements();
+    addManyElements();
+    let ordinaryClass = cont_main.getElementsByClassName("ordinary");
+    while (ordinaryClass[0]) { ordinaryClass[0].parentNode.removeChild(ordinaryClass[0]) };
+    let fizzbuzzClass = cont_main.getElementsByClassName("FizzBuzz");
+    while (fizzbuzzClass[0]) { fizzbuzzClass[0].parentNode.removeChild(fizzbuzzClass[0]) };
+    let buzzClass = cont_main.getElementsByClassName("Buzz");
+    while (buzzClass[0]) { buzzClass[0].parentNode.removeChild(buzzClass[0]) };
+
+}
+
+function findOnlyBuzz() {
+    clearManyElements();
+    addManyElements();
+    let ordinaryClass = cont_main.getElementsByClassName("ordinary");
+    while (ordinaryClass[0]) { ordinaryClass[0].parentNode.removeChild(ordinaryClass[0]) };
+    let fizzbuzzClass = cont_main.getElementsByClassName("FizzBuzz");
+    while (fizzbuzzClass[0]) { fizzbuzzClass[0].parentNode.removeChild(fizzbuzzClass[0]) };
+    let fizzClass = cont_main.getElementsByClassName("Fizz");
+    while (fizzClass[0]) { fizzClass[0].parentNode.removeChild(fizzClass[0]) };
+}
 
 
 main();

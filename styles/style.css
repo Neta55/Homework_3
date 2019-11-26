@@ -63,8 +63,13 @@ button {
    
 }
 
-.buttonRESET {
+.buttonCLEAR {
     background: red;
+   
+}
+
+.buttonRESET {
+    background: cyan;
    
 }
 
