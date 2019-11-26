@@ -46,7 +46,7 @@ input {
 font-size: 1.5em;   
 padding: 4px;
 margin: 4px;
-width: 70px;
+width: 60px;
 font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
 }
 
@@ -57,6 +57,7 @@ button {
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
     padding: 4px;
+    margin: 5px 0 5px;
 }
 
 
