@@ -49,6 +49,11 @@ padding: 4px;
 margin: 4px;
 width: 60px;
 font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+border-image-width: 3px;
+}
+input:hover {
+
+  cursor: pointer;
 }
 
 button {
@@ -60,7 +65,11 @@ button {
     padding: 4px;
     margin: 5px 0 5px;
 }
-
+button:hover,
+button:focus {
+  box-shadow: 0 6px 12px 0 rgba(76, 8, 150, 0.3),0 12px 20px 0 rgba(76, 8, 150, 0.3);
+  cursor: pointer;
+}
 
 
 .buttonGo {
