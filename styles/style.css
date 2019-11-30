@@ -58,7 +58,7 @@ input:hover {
 
 button {
     font-size: 1.2em; 
-    width: 11rem;
+    width: 10rem;
     border-radius: 5px;
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
@@ -109,18 +109,17 @@ color: white;
 
     width: 100%;
     height: auto;
-    display: inline-flex;
+    display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-content: flex-start; 
 }
 
 
 
     .ordinary {
         display: flex;
-       min-width: 9rem;
-       height: 45px;
+        min-width: 9rem;
+        height: 45px;
         border-radius: 7px;
         align-items: center;
         justify-content: center;
