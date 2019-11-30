@@ -1,9 +1,8 @@
 body {
     font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
-    padding: 20px;
-    margin: auto;
     background-image: url("TILE.svg");
     background-size: 7px;
+    align-content: center;
 }
 h1 {
 color: #9900cc;
@@ -15,7 +14,7 @@ text-align: center;
 }
 
 #cont_nav {
-    width: 100%;
+    max-width: 1400px;
     height: auto;
     display: flex;
     justify-content: space-around;
@@ -24,8 +23,7 @@ text-align: center;
     flex-direction: column;
     text-align: center;
     background-color: white;
-    padding: 7px 0 7px;
-    margin-bottom: 10px;
+    margin: 0 auto 10px auto;
    
 
 }
@@ -38,13 +36,13 @@ text-align: center;
     flex-wrap: wrap;
     align-items: center;
     flex-direction: row;
-    padding: 5px 0 5px;
+    padding: 15px 0 5px 0;
 
 
 }
 
 input {
-font-size: 1.4em;   
+font-size: 1.2em;   
 padding: 4px;
 margin: 4px;
 width: 60px;
@@ -58,7 +56,7 @@ input:hover {
 
 button {
     font-size: 1.2em; 
-    width: 10rem;
+    width: 200px;
     border-radius: 5px;
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
@@ -107,68 +105,69 @@ color: white;
 
 #cont_main {
 
-    width: 100%;
+    max-width: 1400px;
     height: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin: 0 auto 5px auto;
 }
 
 
 
     .ordinary {
         display: flex;
-        min-width: 9rem;
+        min-width: 135px;
         height: 45px;
         border-radius: 7px;
         align-items: center;
         justify-content: center;
-        font-size: 1.3em;
+        font-size: 1.1em;
         background-color: white;
-        margin: 10px 0 0 0;
+        margin-top: 10px;
     }
 
 
 
     .Fizz {
         display: flex;
-        min-width: 9rem;
+        min-width:  135px;
         height: 45px;
         border-radius: 7px;
         align-items: center;
         justify-content: center;
-        font-size: 1.3em;
+        font-size: 1.1em;
         background-color:rgb( 255, 51, 255);
         color: white;
-        margin: 10px 0 0 0;
+        margin-top: 10px;
     }
 
 
 
     .Buzz {
         display: flex;
-        min-width: 9rem;
-       height: 45px;
+        min-width: 135px;
+        height: 45px;
         border-radius: 7px;
         align-items: center;
         justify-content: center;
-        font-size: 1.3em;
+        font-size: 1.1em;
         background-color: #916beb;
         color: white;
-        margin: 10px 0 0 0;
+        margin-top: 10px;
     }
 
 
 
     .FizzBuzz {
         display: flex;
-        min-width: 9rem;
+        min-width:  135px;
         height: 45px;
         border-radius: 7px;
         align-items: center;
         justify-content: center;
-        font-size: 1.3em;
+        font-size: 1.1em;
         background-color: #9900cc;
         color: white;
-        margin: 10px 0 0 0;
+        margin-top: 10px;
     }
