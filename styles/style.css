@@ -58,7 +58,7 @@ input:hover {
 
 button {
     font-size: 1.2em; 
-    width: 160px;
+    width: 11rem;
     border-radius: 5px;
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
@@ -109,7 +109,7 @@ color: white;
 
     width: 100%;
     height: auto;
-    display: flex;
+    display: inline-flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-content: flex-start; 
@@ -119,8 +119,8 @@ color: white;
 
     .ordinary {
         display: flex;
-        min-width: 135px;
-        min-height: 45px;
+       min-width: 9rem;
+       height: 45px;
         border-radius: 7px;
         align-items: center;
         justify-content: center;
@@ -133,8 +133,8 @@ color: white;
 
     .Fizz {
         display: flex;
-        min-width: 135px;
-        min-height: 45px;
+        min-width: 9rem;
+        height: 45px;
         border-radius: 7px;
         align-items: center;
         justify-content: center;
@@ -148,8 +148,8 @@ color: white;
 
     .Buzz {
         display: flex;
-        min-width: 135px;
-        min-height: 45px;
+        min-width: 9rem;
+       height: 45px;
         border-radius: 7px;
         align-items: center;
         justify-content: center;
@@ -163,8 +163,8 @@ color: white;
 
     .FizzBuzz {
         display: flex;
-        min-width: 135px;
-        min-height: 45px;
+        min-width: 9rem;
+        height: 45px;
         border-radius: 7px;
         align-items: center;
         justify-content: center;
