@@ -1,4 +1,3 @@
-
 console.log('Running main.js');
 
 function main() {
@@ -67,29 +66,24 @@ function addManyElements(parent) {
     for (let i = initialNum; i <= lastNum; i++) {
         const elem = document.createElement('div');
         elem.id = "elem=" + i;
-
         cont_main.appendChild(elem);
 
         if (i % fizzNum === 0 && i % buzzNum === 0) {
-            elem.setAttribute("id", "elem=" + i);
             elem.setAttribute("class", "FizzBuzz");
             elem.innerText = "FizzBuzz, " + i;
 
         }
         else if (i % fizzNum === 0) {
-            elem.setAttribute("id", "elem=" + i);
             elem.setAttribute("class", "Fizz");
             elem.innerText = "Fizz, " + i;
 
         }
         else if (i % buzzNum === 0) {
-            elem.setAttribute("id", "elem=" + i);
             elem.setAttribute("class", "Buzz");
             elem.innerText = "Buzz, " + i;
 
         }
         else {
-            elem.setAttribute("id", "elem=" + i);
             elem.setAttribute("class", "ordinary");
             elem.innerText = i;
 
@@ -135,4 +129,3 @@ function findOnlyBuzz() {
 
 
 main();
-
