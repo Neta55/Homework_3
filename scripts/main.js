@@ -54,14 +54,16 @@ function addManyElements(parent) {
     clearManyElements();
     console.log("Iztīrīts");
     console.log("Atrasti FizzBuzz");
-    var initialNum = parseInt(document.getElementById('initialNum').value);
-    var lastNum = parseInt(document.getElementById('lastNum').value);
-    var fizzNum = parseInt(document.getElementById('fizzNum').value);
-    var buzzNum = parseInt(document.getElementById('buzzNum').value);
+
+    var initialNum = Math.round(parseInt(document.getElementById('initialNum').value));
+    var lastNum = Math.round(parseInt(document.getElementById('lastNum').value));
+    var fizzNum = Math.round(parseInt(document.getElementById('fizzNum').value));
+    var buzzNum = Math.round(parseInt(document.getElementById('buzzNum').value));
     console.log("initialNum-" + initialNum);
     console.log("lastNum-" + lastNum);
     console.log("fizzNum-" + fizzNum);
     console.log("buzzNum-" + buzzNum);
+
     for (let i = initialNum; i <= lastNum; i++) {
         const elem = document.createElement('div');
         elem.id = "elem=" + i;
