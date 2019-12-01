@@ -63,28 +63,30 @@ function addManyElements() {
     validateInput();
     for (let i = initialNum; i <= lastNum; i++) {
         const elem = document.createElement('div');
-        elem.id = "elem=" + i;
-        cont_main.appendChild(elem);
 
         if (i % fizzNum === 0 && i % buzzNum === 0) {
             elem.setAttribute("class", "FizzBuzz");
             elem.innerText = "FizzBuzz, " + i;
-
+            elem.id = "elem=" + i;
+            cont_main.appendChild(elem);
         }
         else if (i % fizzNum === 0) {
             elem.setAttribute("class", "Fizz");
             elem.innerText = "Fizz, " + i;
-
+            elem.id = "elem=" + i;
+            cont_main.appendChild(elem);
         }
         else if (i % buzzNum === 0) {
             elem.setAttribute("class", "Buzz");
             elem.innerText = "Buzz, " + i;
-
+            elem.id = "elem=" + i;
+            cont_main.appendChild(elem);
         }
         else {
             elem.setAttribute("class", "ordinary");
             elem.innerText = i;
-
+            elem.id = "elem=" + i;
+            cont_main.appendChild(elem);
         }
     }
 }
@@ -99,13 +101,12 @@ function findOnlyFizzBuzz() {
     validateInput();
     for (let i = initialNum; i <= lastNum; i++) {
         const elem = document.createElement('div');
-        elem.id = "elem=" + i;
-        cont_main.appendChild(elem);
 
         if (i % fizzNum === 0 && i % buzzNum === 0) {
             elem.setAttribute("class", "FizzBuzz");
             elem.innerText = "FizzBuzz, " + i;
-
+            elem.id = "elem=" + i;
+            cont_main.appendChild(elem);
         }
 
     }
@@ -119,13 +120,12 @@ function findOnlyFizz() {
     validateInput();
     for (let i = initialNum; i <= lastNum; i++) {
         const elem = document.createElement('div');
-        elem.id = "elem=" + i;
-        cont_main.appendChild(elem);
 
         if (i % fizzNum === 0) {
             elem.setAttribute("class", "Fizz");
             elem.innerText = "Fizz, " + i;
-
+            elem.id = "elem=" + i;
+            cont_main.appendChild(elem);
         }
 
     }
@@ -139,12 +139,12 @@ function findOnlyBuzz() {
     validateInput();
     for (let i = initialNum; i <= lastNum; i++) {
         const elem = document.createElement('div');
-        elem.id = "elem=" + i;
-        cont_main.appendChild(elem);
 
         if (i % buzzNum === 0) {
             elem.setAttribute("class", "Buzz");
             elem.innerText = "Buzz, " + i;
+            elem.id = "elem=" + i;
+            cont_main.appendChild(elem);
 
         }
 
